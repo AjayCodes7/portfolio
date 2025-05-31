@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* navbar */
+.navbar {
+    background-color: #000;
+    padding: 15px 20px 0px 0px;
+}
+
+.fw-bold{
+    font-size: 25px;
+}
+
+/* body */
+body{
+    background: #000;
+}
+
+/* My name */
+#greeting{
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 200;
+}
+
+/* my name */
+#name{
+    font-size: 200px;
+    color: #fff;
+    padding-left: 3%;
+}
+
+/* my role */
+#role{
+    font-family: "Roboto", sans-serif;
+    font-size: 60px;
+    color: #fff;
+    padding-left: 0%;
+    font-weight: bolder;
+    line-height: 1;
+}
+
+/* place time */
+.container-fluid {
+    display: flex;
+}
+
+/* role and time */
+.box {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* location */
+#location{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    padding-right: 2%;
+    text-align: right;
+    font-size: 16px;
+}
+
+/* Middle Note */
+#middle-note{
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 70px;
+    text-align: right;
+    font-weight: 800;
+    padding: 55px 0px;
+}
+
+/* Braces wrapper */
+.middle-note-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    gap: 15px;
+}
+
+/* Braces */
+.braces {
+    font-size: 120px; /* make braces bigger */
+    color: #fff;  /* choose your theme color */
+    font-weight: 300;
+}
+
+
+.main-role{
+    padding:0 0;
+    margin:0 0;
+}
+
+
