@@ -1,14 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+::selection {
+        background-color: black;
+        color: white;
+        }
 html, body {
       margin: 0;
       padding: 0;
       height: 100%;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+            /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
     }
 
     .navbar{
         background: #000;
         padding: 0 ;
         margin: 0 ;
+    }
+
+    .navbar-links{
+        align-items: center;
+        width: 35%;
+        display: flex;
+        gap: 4%;
+        color: rgb(181, 181, 182);
+    }
+    .navbar-links a{
+        text-decoration: none;
+        color: rgb(181, 181, 182);
+        font-size: small;
     }
 
     .navbar-brand{
@@ -19,10 +40,11 @@ html, body {
         font-family: "Poppins", sans-serif
     }
 
-    .navbar-brand:hover{
-        color: rgb(113, 143, 202);
-        text-decoration: none;
+    .world-icon{
+        width: 16px;
+        height: 16px;
     }
+
     .container-fluid {
         background-color: black;
         align-items: center;
@@ -32,6 +54,12 @@ html, body {
     
     .brand-name{
         padding-top: 10px;
+        color:  rgb(181, 181, 182);
+    }
+
+        .navbar-brand:hover{
+        color: rgb(113, 143, 202);
+        text-decoration: none;
     }
 
     .s-page-1 .s-section-1 .s-section {
@@ -59,8 +87,6 @@ html, body {
     .name{
         color: #6067b6;
     }
-
-
 
     .about-me-section{
         height: 100vh; 
@@ -91,15 +117,13 @@ html, body {
     .skills{
         border-radius: 25px;
         color: rgb(229, 231, 235);
-        /* background: rgb(229, 231, 235);   */
         font-family: "poppins", sans-serif;
         font-weight: 500;
-        /* text-align: justify; */
         font-size: 2.2rem;
         padding: 0% 5%;
         display: flex;
-            justify-content: center;
-            align-items: center;
+        justify-content: center;
+        align-items: center;
     }   
 
     .skills-heading{
@@ -219,7 +243,284 @@ html, body {
 
 
     .projects-section{
-        height: 100vh; 
+        height: auto; 
         background-color: white;
         padding: 2%;
     }
+
+    .projects{
+        border-radius: 25px;
+        color: #222222;
+        font-family: "poppins", sans-serif;
+        font-weight: 500;
+        font-size: 2.2rem;
+        padding: 2% 5%;
+    }
+
+    .projects-heading{
+        color: #101010;
+        font-size: 7rem;
+        font-weight: 700;
+        padding: 0;
+    }
+
+/* Hide scrollbar track and thumb for Webkit browsers */
+body::-webkit-scrollbar {
+    width: 0; /* Set width to 0 to hide the scrollbar */
+    height: 0; /* Set height to 0 to hide the scrollbar */
+}
+
+/* Although not strictly needed after width: 0, good practice */
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content {
+    background-color: #1f2937; /* Dark background for content */
+    color: #f9fafb; /* Light text */
+    padding: 30px;
+    border-radius: 1rem; /* rounded-2xl */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 1300px;
+    width: 90%;
+    max-height: 90vh; /* Limit height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling for long content within the overlay */
+    position: relative;
+    transform: translateY(20px); /* Start slightly below center */
+    transition: transform 0.3s ease-in-out;
+
+    /* Hide scrollbar for overlay content */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar track and thumb for overlay content (Webkit browsers) */
+.overlay-content::-webkit-scrollbar {
+    width: 0; /* Set width to 0 to hide the scrollbar */
+    height: 0; /* Set height to 0 to hide the scrollbar */
+}
+
+.overlay-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+.overlay.active .overlay-content {
+    transform: translateY(0); /* Move to center when active */
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #cbd5e0; /* Gray for close button */
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover {
+    color: #fff;
+}
+
+.projects-grid{
+    padding : 2% 5%;
+    display: grid;
+    margin-top: 2%;
+}
+
+.project-card-left{
+    padding: 4%;
+}
+
+.contact-me-section{
+    padding: 3% 5% 1% 5%;
+    background: #000;
+    color: white;
+    height: 50%;
+}
+
+.contact-me-section{
+    height: auto; 
+    padding: 2%;
+}
+.contact-me-name{
+    border-radius: 25px;
+    color: #222222;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 0% 5% 0% 4%;
+}
+.contact-me-heading{
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* padding-bottom: 2%; */
+    color: white;
+}
+
+/* last contact us */
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    padding: 0px 50px;
+    flex-grow: 1; /* Allows main content to take up available space */
+}
+
+.message-section,
+.contact-social-section {
+    flex: 1;
+    min-width: 300px; /* Minimum width for responsiveness */
+    margin: 20px;
+}
+
+.message-section h2,
+.contact-social-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.contact-social-section {
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #bbb; /* Lighter color for placeholders */
+}
+
+button[type="submit"] {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Contact and Social sections */
+.contact-me ul,
+.social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-me li,
+.social li {
+    margin-bottom: 10px;
+}
+
+.contact-me a,
+.social a {
+    color: #fff; /* White link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-me a:hover,
+.social a:hover {
+    color: #aaa; /* Slightly grey on hover */
+    text-decoration: underline; /* Underline on hover */
+    text-underline-offset: 3px;
+}
+
+/* Specific styling for the red underline as seen in the image */
+.contact-me a[href*="wa.me"],
+.social a[href*="instagram"] {
+    text-decoration: underline;
+    text-decoration-color: #25D366;
+    text-underline-offset: 3px; /* Adjust as needed for better spacing */
+}
+
+footer {
+    display: flex; /* Make the footer a flex container */
+    justify-content: space-between; /* Distribute space between items (pushes them to ends) */
+    align-items: center; /* Vertically align items in the middle */
+    padding: 20px 50px 40px 50px; /* Adjust padding if needed, left/right padding is important here */
+    border-top: 1px solid #333;
+    border-width: 90%;
+    color: #aaa;
+}
+
+footer p {
+    margin: 0; /* Remove default paragraph margins to prevent extra spacing */
+}
+
+#message{
+    padding: 10px;
+}
+
+#confirmation {
+  display: flex;
+  align-items: center; 
+  gap: 15px;
+}
+
+#status-message{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+}
