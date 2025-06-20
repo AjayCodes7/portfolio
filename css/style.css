@@ -46,6 +46,13 @@ html, body {
         font-family: "Poppins", sans-serif
     }
 
+    .offcanvas{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(181, 181, 182);
+        font-family: "Poppins", sans-serif;
+        
+    }
+
     .world-icon{
         width: 16px;
         height: 16px;
