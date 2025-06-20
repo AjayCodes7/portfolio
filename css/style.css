@@ -46,6 +46,22 @@ html, body {
         font-family: "Poppins", sans-serif
     }
 
+    .navbar-toggler:hover .navbar-toggler-icon,
+.navbar-toggler:focus .navbar-toggler-icon,
+.navbar-toggler:active .navbar-toggler-icon {
+    width: 28px;
+    height: 28px;
+    background-size: 100% 100%;
+}
+.navbar-toggler .navbar-toggler-icon {
+    width: 28px;  /* Your desired fixed width */
+    height: 28px; /* Your desired fixed height */
+    background-size: 100% 100%; /* Important: Ensures the background image scales correctly */
+    /* Add !important if necessary, but try without it first */
+    /* width: 28px !important; */
+    /* height: 28px !important; */
+}
+
     .offcanvas{
         background-color: rgba(0, 0, 0, 0.5);
         color: rgb(181, 181, 182);
@@ -203,7 +219,7 @@ html, body {
 }
 
 /* Desktop/Large Screen (Default) - Adjust these values as necessary for your design */
-.c-lang { top: 10%; left: 10%; font-size: 3.5rem; }
+.c-lang { top: 10%; left: 10%; font-size: 4.5rem; }
 .python-lang { top: 10%; left: 25%; font-size: 4.5rem; }
 .php-lang { top: 10%; left: 65%; font-size: 3rem; }
 .html-lang { top: 20%; left: 80%; font-size: 2.5rem; }
@@ -293,21 +309,22 @@ html, body {
     .skill-item { font-size: 1rem !important; }
     .python-lang { font-size: 2rem !important; }
     .java-lang, .dsa-concept { font-size: 1.6rem !important; }
-    .c-lang, .reactjs-lib { font-size: 1.4rem !important; }
+    .reactjs-lib { font-size: 1.4rem !important; }
+    .c-lang { font-size: 2.4rem !important; }
     .php-lang, .flutter-framework, .sql-lang { font-size: 1.2rem !important; }
 
-    .c-lang { top: 3%; left: 3%; }
-    .python-lang { top: 2%; left: 30%; }
+    .c-lang { top: 4%; left: 5%; }
+    .python-lang { top: 2%; left: 25%; }
     .php-lang { top: 3%; left: 75%; }
     .html-lang { top: 15%; left: 75%; }
-    .bootstrap-lib { top: 23%; left: 2%; }
+    .bootstrap-lib { top: 20%; left: 2%; }
     .javascript-lang { top: 20%; left: 28%; }
     .git-tool { top: 30%; left: 8%; }
     .java-lang { top: 28%; left: 35%; }
     .flutter-framework { top: 25%; left: 65%; }
     .nodejs-runtime { top: 40%; left: 5%; }
     .dsa-concept { top: 50%; left: 20%; }
-    .css-lang { top: 40%; left: 45%; }
+    .css-lang { top: 45%; left: 45%; }
     .reactjs-lib { top: 55%; left: 48%; }
     .vscode-tool { top: 65%; left: 10%; }
     .sql-lang { top: 38%; left: 70%; }
@@ -619,4 +636,8 @@ footer p {
 #status-message{
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
+}
+
+#about-me, #my-skills, #projects, #contact-me {
+    scroll-margin-top: 5vh; /* Adjusted for fixed navbar */
 }
