@@ -22,52 +22,23 @@
 <body>
     <div class="s-page-1">
         <div class="s-section-1">
-
             <!-- Nav Bar -->
-            <nav class="navbar bg-body-tertiary fixed-top navbar-expand-md">
-                <div class="container-fluid" style="padding-right: 5%;">
+            <nav class="navbar bg-body-tertiary fixed-top">
+                <div class="container-fluid">
                     <a class="navbar-brand" href="">
-                        <img src="favicon\favicon-32x32.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-center">
-                        Ajay Kommana
+                    <img src="favicon\favicon-32x32.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-center">
+                    Ajay Kommana
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end content-center flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#about-me" >About me</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#my-skills" >My Skills</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#projects" >Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#contact-me">Get in touch</a>
-                                </li>
-                                <li class="nav-item d-flex align-items-center m-3 m-lg-0 m-md-0">
-                                    <img class="world-icon me-2" src="https://cdn.prod.website-files.com/62b93934fb5c4c2d1245bff2/64c45d1d8c52bbd10ab2624e_Vector%20(34).svg" alt="World" width="12" height="12">
-                                    <span class="nav-link text-[#b5b5b6] p-0 text-xs font-[Poppins] font-light hover:text-[#b5b5b6]">Visakhapatnam</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class = "navbar-links">
+                        <a href="#about-me">About me</a>
+                    <a href="#my-skills">My Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact-me">Get in touch</a>
+                    <div class = "navbar-links">
+                        <img class="world-icon" src="https://cdn.prod.website-files.com/62b93934fb5c4c2d1245bff2/64c45d1d8c52bbd10ab2624e_Vector%20(34).svg" alt="World">
+                        <a href="">Visakhapatnam</a>
                     </div>
-                    <!-- <div class = "navbar-links d-none d-lg-flex"> <a href="#about-me">About me</a>
-                        <a href="#my-skills">My Skills</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#contact-me">Get in touch</a>
-                        <div class = "navbar-links">
-                            <img class="world-icon" src="https://cdn.prod.website-files.com/62b93934fb5c4c2d1245bff2/64c45d1d8c52bbd10ab2624e_Vector%20(34).svg" alt="World">
-                            <a href="">Visakhapatnam</a>
-                        </div>
-                    </div> -->
+                    </div>
                 </div>
             </nav>
             <!-- Greetings -->
@@ -229,7 +200,7 @@
         <main>
         <section class="message-section">
             <h2>Get in touch</h2>
-            <form id="contact-form" method="post">
+            <form id="contact-form">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>

@@ -19,18 +19,24 @@ html, body {
         margin: 0 ;
     }
 
-    .navbar-links{
+    .navbar-nav{
+        padding-right: 30px;
+        align-items: center;
+    }
+
+    /* .navbar-links{
         align-items: center;
         width: 35%;
         display: flex;
         gap: 4%;
         color: rgb(181, 181, 182);
-    }
-    .navbar-links a{
+    } */
+
+    .navlink{
         text-decoration: none;
         color: rgb(181, 181, 182);
         font-size: small;
-    }
+    } 
 
     .navbar-brand{
         text-align: center;
@@ -68,16 +74,31 @@ html, body {
         /* position: relative;
         overflow: hidden; */
     }
+
+
     .content {
-        position: absolute;
+    position: absolute;
+    top: 50%; /* Adjusted for better vertical centering */
+    left: 50%;
+    transform: translate(-50%, 30%); /* Center horizontally and vertically */
+    color: white;
+    font-size: clamp(2.5rem, 8vw + 1rem, 8rem); /* Fluid font size */
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 90%; /* Ensure content doesn't overflow horizontally */
+    text-align: left; /* Center text on small screens */
+}
+
+/* Adjust specific positioning for larger screens if needed */
+@media (min-width: 992px) { /* Adjust for desktop */
+    .content {
         top: 40%;
         left: 6%;
-        /* transform: translate(-50%, -50%); */
-        color: white;
-        font-size: 8rem;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
+        transform: none; /* Remove centering for desktop */
+        text-align: left; /* Align text left for desktop */
+        width: auto;
     }
+}
 
     .greeting{
         margin: 0;
@@ -89,180 +110,205 @@ html, body {
     }
 
     .about-me-section{
-        height: 100vh; 
-        padding: 2%;
-    }
+    min-height: auto; /* Use min-height */
+    padding: 3vw 1%; /* Use viewport height for padding */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
 
-    .about-me-heading{
-        font-size: 6rem;
-        font-weight: 600;
-        padding-bottom: 2%;
-        color: #101010;
-    }
-    .about-me{
-        border-radius: 25px;
-        color: #222222;
-        font-family: "poppins", sans-serif;
-        font-weight: 500;
-        font-size: 2.2rem;
-        padding: 2% 5%;
-    }
+.about-me-heading{
+    font-size: clamp(3rem, 6vw + 1rem, 6rem); /* Fluid font size */
+    font-weight: 600;
+    padding-bottom: 2%;
+    color: #101010;
+    text-align: left; /* Center heading on all screens */
+}
+.about-me{
+    border-radius: 25px;
+    color: #222222;
+    font-family: "Poppins", sans-serif; /* Corrected typo: Poppins */
+    font-weight: 500;
+    font-size: clamp(1rem, 2.2vw + 0.5rem, 2.2rem); /* Fluid font size */
+    padding: 2% 5%;
+    max-width: 1400px; /* Limit max width for readability */
+    width: 90%; /* Fluid width */
+}
+.skills-section{
+    min-height: auto; /* Use min-height */
+    background-color: #101010;
+    padding: 5vh 2%; /* Adjusted padding */
+    display: flex;
+    flex-direction: column; /* Stack heading and container */
+    align-items: center;
+    justify-content: center;
+}
 
-    .skills-section{
-        height: 100vh; 
-        background-color: #101010;
-        padding: 2% 2% 0% 2%;
-    }
+.skills{
+    border-radius: 25px;
+    color: rgb(229, 231, 235);
+    font-family: "Poppins", sans-serif; /* Corrected typo */
+    font-weight: 500;
+    font-size: 2.2rem;
+    padding: 0% 5%;
+    width: 100%; /* Ensure it takes full width */
+    display: flex; /* Kept flex for centering heading */
+    /* flex-direction: column; Stack heading */
+    align-items: center;
+    justify-content: center;
+}
 
-    .skills{
-        border-radius: 25px;
-        color: rgb(229, 231, 235);
-        font-family: "poppins", sans-serif;
-        font-weight: 500;
-        font-size: 2.2rem;
-        padding: 0% 5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }   
+.skills-heading{
+    color: #ffffff;
+    font-size: clamp(3.5rem, 7vw + 1rem, 7rem); /* Fluid font size */
+    font-weight: 700;
+    padding: 2% 0%;
+    text-align: left;
+}
 
-    .skills-heading{
-        color: #ffffff;
-        font-size: 7rem;
-        font-weight: 700;
-        padding: 2% 0%;
-    }
+.skills-container {
+    width: 90%; /* Adjust width as needed */
+    max-width: 900px; /* Max width for larger screens */
+    height: 600px; /* Fixed height for the cloud effect, adjust with media queries */
+    position: relative;
+    align-self: center;
+}
 
+.skill-item {
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1.5rem; /* Base font size, will be overridden */
+}
+
+.skill-item:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    text-stroke: 2px #ffffff; /* Reduced stroke for better visibility on smaller fonts */
+}
+
+/* Desktop/Large Screen (Default) - Adjust these values as necessary for your design */
+.c-lang { top: 10%; left: 10%; font-size: 3.5rem; }
+.python-lang { top: 10%; left: 25%; font-size: 4.5rem; }
+.php-lang { top: 10%; left: 65%; font-size: 3rem; }
+.html-lang { top: 20%; left: 80%; font-size: 2.5rem; }
+.bootstrap-lib { top: 30%; left: 5%; font-size: 2.5rem; }
+.javascript-lang { top: 30%; left: 40%; font-size: 2.75rem; }
+.git-tool { top: 45%; left: 20%; font-size: 2.5rem; }
+.java-lang { top: 45%; left: 35%; font-size: 4rem; }
+.flutter-framework { top: 40%; left: 70%; font-size: 3rem; }
+.nodejs-runtime { top: 60%; left: 15%; font-size: 2.5rem; }
+.dsa-concept { top: 80%; left: 35%; font-size: 4rem; }
+.css-lang { top: 60%; left: 55%; font-size: 2.5rem; }
+.reactjs-lib { top: 70%; left: 60%; font-size: 3.5rem; }
+.vscode-tool { top: 75%; left: 10%; font-size: 2.5rem; }
+.sql-lang { top: 57%; left: 75%; font-size: 3rem; }
+
+/* Media Queries for Skills Section */
+
+/* Tablet/Medium Screens (e.g., max-width 991px, roughly Bootstrap's -lg breakpoint) */
+@media (max-width: 991px) {
     .skills-container {
-            width: 90%; /* Adjust width as needed */
-            max-width: 900px; /* Max width for larger screens */
-            height: 600px; /* Fixed height for the cloud effect */
-            position: relative;
-            align-self: center;
-            /* Optional: border for visualization during development */
-            /* border: 1px dashed #ccc; */
-        }
-
-    .skill-item {
-        position: absolute;
-        font-weight: bold; /* Bold text as in the image */
-        color: #ffffff; /* Dark text color for filled text */
-        white-space: nowrap; /* Prevent text wrapping */
-        transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Smooth transition for hover */
-        cursor: pointer; /* Indicate interactivity */
+        height: 500px; /* Adjust height */
+        max-width: 700px; /* Limit width */
     }
-
-    /* Hover effect: make the word bigger */
-    .skill-item:hover {
-        transform: scale(1.2); /* Scale up by 20% */
-        z-index: 10; /* Bring hovered item to front */
+    .skills{
+        flex-direction: column;
     }
+    .skill-item { font-size: 1.8rem !important; }
+    .python-lang { font-size: 3.5rem !important; }
+    .java-lang, .dsa-concept { font-size: 3rem !important; }
+    .c-lang, .reactjs-lib { font-size: 2.5rem !important; }
+    .php-lang, .flutter-framework, .sql-lang { font-size: 2.2rem !important; }
 
-    /* Style for outline text */
-    .outline-text {
-        color: transparent; /* Make the fill transparent */
-        -webkit-text-stroke: 2px #ffffff; /* Add a dark stroke */
-        text-stroke: 4px #ffffff; /* Standard property for future compatibility */
+    .c-lang { top: 8%; left: 8%; }
+    .python-lang { top: 8%; left: 28%; }
+    .php-lang { top: 8%; left: 65%; }
+    .html-lang { top: 18%; left: 75%; }
+    .bootstrap-lib { top: 25%; left: 5%; }
+    .javascript-lang { top: 25%; left: 38%; }
+    .git-tool { top: 40%; left: 15%; }
+    .java-lang { top: 40%; left: 40%; }
+    .flutter-framework { top: 35%; left: 70%; }
+    .nodejs-runtime { top: 55%; left: 12%; }
+    .dsa-concept { top: 65%; left: 30%; }
+    .css-lang { top: 55%; left: 58%; }
+    .reactjs-lib { top: 65%; left: 60%; }
+    .vscode-tool { top: 70%; left: 8%; }
+    .sql-lang { top: 52%; left: 72%; }
+}
+
+
+/* Small Mobile Screens (e.g., max-width 767px, roughly Bootstrap's -md breakpoint) */
+@media (max-width: 767px) {
+    .skills-container {
+        height: 400px; /* Reduce height further */
+        width: 95%; /* Take more width */
     }
+    .skill-item { font-size: 1.2rem !important; }
+    .python-lang { font-size: 2.5rem !important; }
+    .java-lang, .dsa-concept { font-size: 2rem !important; }
+    .c-lang, .reactjs-lib { font-size: 1.8rem !important; }
+    .php-lang, .flutter-framework, .sql-lang { font-size: 1.5rem !important; }
+    .outline-text { -webkit-text-stroke: 1px #ffffff; text-stroke: 1px #ffffff; } /* Thinner stroke */
 
-    /* Specific positioning and font sizes to match the image closely */
-    .c-lang { top: 10%; left: 10%; font-size: 3.5rem; } /* 56px */
-    .python-lang { top: 10%; left: 25%; font-size: 4.5rem; } /* 72px */
-    .php-lang { top: 10%; left: 60%; font-size: 3rem; } /* 48px */
-    .html-lang { top: 15%; left: 78%; font-size: 2.5rem; } /* 40px */
-    .bootstrap-lib { top: 30%; left: 5%; font-size: 2.5rem; } /* 40px */
-    .javascript-lang { top: 30%; left: 40%; font-size: 2.75rem; } /* 44px */
-    .git-tool { top: 45%; left: 20%; font-size: 2.5rem; } /* 40px */
-    .java-lang { top: 45%; left: 35%; font-size: 4rem; } /* 64px */
-    .flutter-framework { top: 40%; left: 70%; font-size: 3rem; } /* 48px */
-    /* Adjusted Node.js and React.js positions to be closer */
-    .nodejs-runtime { top: 60%; left: 15%; font-size: 2.5rem; } /* 40px */
-    .dsa-concept { top: 75%; left: 35%; font-size: 4rem; } /* 64px */
-    .css-lang { top: 55%; left: 55%; font-size: 2.5rem; } /* 40px */
-    .reactjs-lib { top: 70%; left: 60%; font-size: 3.5rem; } /* 56px */
-    .vscode-tool { top: 75%; left: 10%; font-size: 2.5rem; }
-    .sql-lang { top: 57%; left: 75%; font-size: 3rem; }
+    .c-lang { top: 5%; left: 5%; }
+    .python-lang { top: 5%; left: 25%; }
+    .php-lang { top: 3%; left: 65%; }
+    .html-lang { top: 12%; left: 70%; }
+    .bootstrap-lib { top: 20%; left: 3%; }
+    .javascript-lang { top: 25%; left: 28%; }
+    .git-tool { top: 35%; left: 10%; }
+    .java-lang { top: 35%; left: 40%; }
+    .flutter-framework { top: 30%; left: 65%; }
+    .nodejs-runtime { top: 50%; left: 8%; }
+    .dsa-concept { top: 55%; left: 25%; }
+    .css-lang { top: 45%; left: 50%; }
+    .reactjs-lib { top: 55%; left: 55%; }
+    .vscode-tool { top: 70%; left: 15%; }
+    .sql-lang { top: 47%; left: 70%; }
+}
 
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) {
-        .skills-container {
-            height: 400px; /* Reduce height for mobile */
-            width: 95%;
-        }
-        .skill-item { font-size: 1.5rem !important; } /* Reduce all font sizes */
-        .python-lang { font-size: 2.5rem !important; }
-        .java-lang, .dsa-concept { font-size: 2.25rem !important; }
-        .c-lang, .reactjs-lib { font-size: 2rem !important; }
-
-        /* Adjust positions for smaller screens to prevent overlap */
-        .c-lang { top: 5%; left: 5%; }
-        .python-lang { top: 5%; left: 30%; }
-        .php-lang { top: 5%; left: 65%; }
-        .html-lang { top: 15%; left: 75%; }
-        .bootstrap-lib { top: 20%; left: 5%; }
-        .javascript-lang { top: 20%; left: 40%; }
-        .git-tool { top: 35%; left: 15%; }
-        .java-lang { top: 35%; left: 45%; }
-        .flutter-framework { top: 30%; left: 70%; }
-        /* Adjusted Node.js and React.js positions for mobile */
-        .nodejs-runtime { top: 55%; left: 10%; }
-        .dsa-concept { top: 60%; left: 30%; }
-        .css-lang { top: 50%; left: 60%; }
-        .reactjs-lib { top: 60%; left: 55%; }
-        .vscode-tool { top: 70%; left: 20%;  }
-        .sql-lang { top: 57%; left: 75%; font-size: 2.5rem; }
+/* Very Small Mobile Screens (e.g., max-width 480px) */
+@media (max-width: 480px) {
+    .skills-container {
+        height: 350px; /* Even smaller height */
+        width: 98%;
     }
+    .skill-item { font-size: 1rem !important; }
+    .python-lang { font-size: 2rem !important; }
+    .java-lang, .dsa-concept { font-size: 1.6rem !important; }
+    .c-lang, .reactjs-lib { font-size: 1.4rem !important; }
+    .php-lang, .flutter-framework, .sql-lang { font-size: 1.2rem !important; }
 
-    @media (max-width: 480px) {
-        .skills-container {
-            height: 300px; /* Further reduce height for very small screens */
-        }
-        .skill-item { font-size: 1.2rem !important; } /* Further reduce all font sizes */
-        .python-lang { font-size: 2rem !important; }
-        .java-lang, .dsa-concept { font-size: 1.8rem !important; }
-        .c-lang, .reactjs-lib { font-size: 1.5rem !important; }
-
-        /* Fine-tune positions for tiny screens */
-        .c-lang { top: 3%; left: 3%; }
-        .python-lang { top: 3%; left: 25%; }
-        .php-lang { top: 3%; left: 55%; }
-        .html-lang { top: 10%; left: 70%; }
-        .bootstrap-lib { top: 15%; left: 3%; }
-        .javascript-lang { top: 15%; left: 25%; }
-        .git-tool { top: 25%; left: 10%; }
-        .java-lang { top: 28%; left: 40%; }
-        .flutter-framework { top: 25%; left: 65%; }
-        /* Adjusted Node.js and React.js positions for very small screens */
-        .nodejs-runtime { top: 45%; left: 8%; }
-        .dsa-concept { top: 50%; left: 25%; }
-        .css-lang { top: 40%; left: 55%; }
-        .reactjs-lib { top: 50%; left: 50%; }
-        .vscode-tool { top: 80%; left: 20%;  }
-        .sql-lang { top: 57%; left: 75%; font-size: 2.5rem; }
-    }
+    .c-lang { top: 3%; left: 3%; }
+    .python-lang { top: 2%; left: 30%; }
+    .php-lang { top: 3%; left: 75%; }
+    .html-lang { top: 15%; left: 75%; }
+    .bootstrap-lib { top: 23%; left: 2%; }
+    .javascript-lang { top: 20%; left: 28%; }
+    .git-tool { top: 30%; left: 8%; }
+    .java-lang { top: 28%; left: 35%; }
+    .flutter-framework { top: 25%; left: 65%; }
+    .nodejs-runtime { top: 40%; left: 5%; }
+    .dsa-concept { top: 50%; left: 20%; }
+    .css-lang { top: 40%; left: 45%; }
+    .reactjs-lib { top: 55%; left: 48%; }
+    .vscode-tool { top: 65%; left: 10%; }
+    .sql-lang { top: 38%; left: 70%; }
+}
 
 
-    .projects-section{
-        height: auto; 
-        background-color: white;
-        padding: 2%;
-    }
 
-    .projects{
-        border-radius: 25px;
-        color: #222222;
-        font-family: "poppins", sans-serif;
-        font-weight: 500;
-        font-size: 2.2rem;
-        padding: 2% 5%;
-    }
-
-    .projects-heading{
-        color: #101010;
-        font-size: 7rem;
-        font-weight: 700;
-        padding: 0;
-    }
+/* Not needed ======================================================================================================== Start*/ 
 
 /* Hide scrollbar track and thumb for Webkit browsers */
 body::-webkit-scrollbar {
@@ -356,16 +402,55 @@ body::-webkit-scrollbar-thumb {
 .close-button:hover {
     color: #fff;
 }
+/* Not needed ======================================================================================================== End*/ 
+
+.projects-section{
+    height: auto;
+    background-color: white;
+    padding: 5vh 2%; /* Use viewport height for padding */
+}
+
+.projects{
+    border-radius: 25px;
+    color: #222222;
+    font-family: "Poppins", sans-serif; /* Corrected typo */
+    font-weight: 500;
+    font-size: 2.2rem;
+    padding: 2% 5%;
+    max-width: 1400px; /* Limit max width for readability */
+    margin: 0 auto; /* Center the projects container */
+}
+
+.projects-heading{
+    color: #101010;
+    font-size: clamp(3.5rem, 7vw + 1rem, 7rem); /* Fluid font size */
+    font-weight: 700;
+    padding: 0;
+    text-align: left; /* Center heading */
+    margin-bottom: 30px; /* Add some space below heading */
+}
 
 .projects-grid{
-    padding : 2% 5%;
+    padding : 2% 0%; /* Remove horizontal padding here, let parent handle it */
     display: grid;
+    grid-template-columns: 1fr; /* This will now apply to all screen sizes, including PC */
+    gap: 2rem; /* Consistent gap between items */
     margin-top: 2%;
 }
 
 .project-card-left{
-    padding: 4%;
+    padding: 1.5rem; /* Use rem for consistent padding */
+    font-size: 1rem; /* Base font size */
 }
+
+/* Adjust project card text sizes */
+.projects-grid .text-4xl {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+}
+.projects-grid .text-5xl {
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+}
+
 
 .contact-me-section{
     padding: 3% 5% 1% 5%;
@@ -398,7 +483,7 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
-    padding: 0px 50px;
+    padding: 0px 5%;
     flex-grow: 1; /* Allows main content to take up available space */
 }
 
@@ -504,6 +589,10 @@ footer {
     border-top: 1px solid #333;
     border-width: 90%;
     color: #aaa;
+}
+
+footer{
+    flex-wrap: wrap;
 }
 
 footer p {
