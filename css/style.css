@@ -63,10 +63,16 @@ html, body {
 }
 
     .offcanvas{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0);
         color: rgb(181, 181, 182);
         font-family: "Poppins", sans-serif;
-        
+    }
+
+    @media(max-width:768px){
+            #offcanvasNavbar.offcanvas {
+            width: 60vw; /* Takes up 80% of the viewport width */
+            max-width: 300px;
+        }
     }
 
     .world-icon{
@@ -465,8 +471,52 @@ body::-webkit-scrollbar-thumb {
 }
 
 .project-card-left{
-    padding: 1.5rem; /* Use rem for consistent padding */
+    padding: 1.5rem ; /* Use rem for consistent padding */
     font-size: 1rem; /* Base font size */
+}
+
+
+
+.overview-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 2% 0% 2% 1%;
+            font-size: 1.3rem;
+            font-family:"Poppins", sans-serif;
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* If it's a link styled as a button */
+            max-width: fit-content;
+        }
+
+        .overview-button:hover {
+            text-decoration: underline;
+            /* text-decoration-color: #25D366; */
+            text-underline-offset: 5px;
+        }
+
+        /* Alternatively, using an SVG icon */
+        .overview-button .svg-arrow-icon {
+            align-items: center;
+            margin-left: 8px;
+            margin-top: 8px;
+            width: 1.3rem; /* Adjust size as needed */
+            height: 1.3rem;
+            fill: currentColor; /* Inherits color from parent */
+        }
+
+.navbar-toggler {
+    border: 0px solid rgba(255, 255, 255, 0.5); /* A slightly more visible white border */
+    /* You can make it bolder, e.g., border: 2px solid white; */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none; /* Lighter shadow on focus */
+    outline: 0;
+    /* Or remove focus outline entirely if you don't want it: outline: 0; box-shadow: none; */
 }
 
 /* Adjust project card text sizes */

@@ -1,0 +1,9 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+        -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            background: #000;
+    }

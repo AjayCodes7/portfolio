@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >I am ajay</title>
+    <!-- <title >I am ajay</title> -->
+    <title >Portfolio</title>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -24,7 +25,7 @@
         <div class="s-section-1">
 
             <!-- Nav Bar -->
-            <nav class="navbar bg-body-tertiary fixed-top navbar-expand-md bg-dark">
+            <nav class="navbar bg-body-tertiary fixed-top navbar-expand-md bg-dark navbar-dark">
                 <div class="container-fluid" style="padding-right: 5%;">
                     <a class="navbar-brand" href="">
                         <img src="favicon\favicon-32x32.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-center">
@@ -33,6 +34,7 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -41,16 +43,16 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end content-center flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#about-me" >About me</a>
+                                    <a href="#about-me" class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6] offcanvas-nav-link">About me</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#my-skills" >My Skills</a>
+                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6] offcanvas-nav-link" href="#my-skills" >My Skills</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#projects" >Projects</a>
+                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6] offcanvas-nav-link" href="#projects" >Projects</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6]" href="#contact-me">Get in touch</a>
+                                    <a class="nav-link text-[#b5b5b6] text-xs font-[Poppins] font-light hover:text-[#b5b5b6] offcanvas-nav-link" href="#contact-me">Get in touch</a>
                                 </li>
                                 <li class="nav-item d-flex align-items-center m-3 m-lg-0 m-md-0">
                                     <img class="world-icon me-2" src="https://cdn.prod.website-files.com/62b93934fb5c4c2d1245bff2/64c45d1d8c52bbd10ab2624e_Vector%20(34).svg" alt="World" width="12" height="12">
@@ -110,7 +112,7 @@
             <h1 class = "projects-heading">Projects</h1>
             <div class="projects-grid grid grid-cols-1 gap-8 max-w-9xl w-full"> <!-- Increased max-w to give more space for two-column card content -->
 
-            <!-- Grid Item 1 -->
+            <!-- Major Project 2025 -->
             <div class="grid-item p-[5] flex flex-col sm:flex-row bg-[#e8eaed] rounded-3xl transform transition-all duration-300  overflow-hidden"
                     data-title="Project Alpha"
                     data-description="This is a comprehensive description for Project Alpha. It involved developing a predictive analytics model using machine learning algorithms to forecast energy consumption patterns in smart grids. Key challenges included handling large datasets, ensuring data integrity, and optimizing model performance for real-time applications. The project delivered a solution that improved energy efficiency by 15% and reduced operational costs through automated demand-side management. Technologies used: Python, TensorFlow, scikit-learn, Apache Kafka, and a custom data visualization dashboard. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora explicabo fuga aliquam voluptatum cupiditate architecto amet aliquid in molestiae quisquam? Quia est qui ad placeat architecto quos voluptas officia minus vero, numquam voluptates error molestiae animi exercitationem, ex at, enim eligendi. Quis dolorum error praesentium cumque. Totam minima amet rerum velit ea fugit? Deleniti quis tenetur voluptatum expedita id sit itaque iusto labore assumenda, quas obcaecati quam et ipsa omnis, sequi asperiores incidunt qui distinctio veniam. Totam laborum aliquam eveniet voluptatem ipsum eius ullam animi laboriosam ut? Voluptates doloribus, a atque officiis mollitia suscipit sit quam dolor sunt tempore quod? "
@@ -118,19 +120,48 @@
                 <!-- Left Content (Title & Description) -->
                 <div class="project-card-left flex-1 p-8 sm:pr-0 bg-[#010101] flex flex-col justify-top">
                     <h3 class="text-4xl font-semibold text-white mb-2">2025</h3>
-                    <h3 class="text-5xl font-semibold text-white mb-2">Real-Time Sign Language Captioning</h3>
-                    <h3 class="text-5xl font-semibold text-white mb-2">For Video Chats</h3>
+                    <h3 class="text-5xl font-semibold text-white mb-2">Real-Time Sign Language Captioning For Video Chats</h3>
+                    <a href="/projects/Sign-Language-Captioning" target="_blank" class="overview-button">
+                    Overview
+                        <svg class="svg-arrow-icon" viewBox="0 0 24 24">
+                            <path d="M5 17l14-14m0 0v12m0-12H7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <!-- <h3 class="text-5xl font-semibold text-white mb-2"></h3> -->
                     <!-- <p class="text-gray-600 text-base leading-relaxed">A brief overview of Project Alpha. This project focused on optimizing energy distribution using machine learning models.</p> -->
-                    <!-- <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button> -->
                 </div>
                 <!-- Right Content (Image) -->
                 <div class="flex-1 w-full sm:w-1/2">
                     <!-- <img src="https://placehold.co/600x400/000000/ffffff?text=AI+Meme+Generator" alt="Project Alpha Thumbnail" class="w-full h-full object-cover"> -->
                     <img src="images/teacher-7096482.png" alt="Project Alpha Thumbnail" class="w-full h-full object-cover">
                 </div>
+                
             </div>
+            
+            <!-- Microfin 2024 -->
+        <div class="grid-item p-[5] flex flex-col sm:flex-row bg-[#e8eaed] rounded-3xl transform transition-all duration-300  overflow-hidden"
+                data-image="https://placehold.co/600x400/4a90e2/ffffff?text=Project+Alpha">
+            <!-- Left Content (Title & Description) -->
+            <div class="project-card-left flex-1 p-8 sm:pr-0 bg-[#010101] flex flex-col justify-top">
+                <h3 class="text-4xl font-semibold text-white mb-2">2024</h3>
+                <h3 class="text-5xl font-semibold text-white mb-2">&gt;&gt; MicroFin</h3>
+                <a href="#" class="overview-button">
+                    Overview
+                        <svg class="svg-arrow-icon" viewBox="0 0 24 24">
+                            <path d="M5 17l14-14m0 0v12m0-12H7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                <!-- <p class="text-gray-600 text-base leading-relaxed">A brief overview of Project Alpha. This project focused on optimizing energy distribution using machine learning models.</p> -->
+                <!-- <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button> -->
+            </div>
+            <!-- Right Content (Image) -->
+            <div class="flex-1 w-full sm:w-1/2">
+                <!-- <img src="https://placehold.co/600x400/000000/ffffff?text=AI+Meme+Generator" alt="Project Alpha Thumbnail" class="w-full h-full object-cover"> -->
+                <img src="images/microfin.png" alt="Project Alpha Thumbnail" class="w-full h-full object-cover">
+            </div>
+        </div>
 
-                <!-- Grid Item 1 -->
+                <!-- Microfin 2024 -->
             <div class="grid-item p-[5] flex flex-col sm:flex-row bg-[#e8eaed] rounded-3xl transform transition-all duration-300  overflow-hidden"
                     data-title="Project Alpha"
                     data-description="This is a comprehensive description for Project Alpha. It involved developing a predictive analytics model using machine learning algorithms to forecast energy consumption patterns in smart grids. Key challenges included handling large datasets, ensuring data integrity, and optimizing model performance for real-time applications. The project delivered a solution that improved energy efficiency by 15% and reduced operational costs through automated demand-side management. Technologies used: Python, TensorFlow, scikit-learn, Apache Kafka, and a custom data visualization dashboard. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora explicabo fuga aliquam voluptatum cupiditate architecto amet aliquid in molestiae quisquam? Quia est qui ad placeat architecto quos voluptas officia minus vero, numquam voluptates error molestiae animi exercitationem, ex at, enim eligendi. Quis dolorum error praesentium cumque. Totam minima amet rerum velit ea fugit? Deleniti quis tenetur voluptatum expedita id sit itaque iusto labore assumenda, quas obcaecati quam et ipsa omnis, sequi asperiores incidunt qui distinctio veniam. Totam laborum aliquam eveniet voluptatem ipsum eius ullam animi laboriosam ut? Voluptates doloribus, a atque officiis mollitia suscipit sit quam dolor sunt tempore quod? "
@@ -139,6 +170,12 @@
                 <div class="project-card-left flex-1 p-8 sm:pr-0 bg-[#010101] flex flex-col justify-top">
                     <h3 class="text-4xl font-semibold text-white mb-2">2024</h3>
                     <h3 class="text-5xl font-semibold text-white mb-2">AI Meme Generator</h3>
+                    <a href="#" class="overview-button">
+                    Overview
+                        <svg class="svg-arrow-icon" viewBox="0 0 24 24">
+                            <path d="M5 17l14-14m0 0v12m0-12H7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                     <!-- <p class="text-gray-600 text-base leading-relaxed">A brief overview of Project Alpha. This project focused on optimizing energy distribution using machine learning models.</p> -->
                     <!-- <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button> -->
                 </div>
@@ -149,6 +186,7 @@
                 </div>
             </div>
 
+
                 <!-- Grid Item 1 -->
             <div class="grid-item p-[5] flex flex-col sm:flex-row bg-[#e8eaed] rounded-3xl transform transition-all duration-300  overflow-hidden"
                     data-title="Project Alpha"
@@ -158,6 +196,12 @@
                 <div class="project-card-left flex-1 p-8 sm:pr-0 bg-[#010101] flex flex-col justify-top">
                     <h3 class="text-4xl font-semibold text-white mb-2">2023</h3>
                     <h3 class="text-5xl font-semibold text-white mb-2">Quizzes!</h3>
+                    <a href="#" class="overview-button">
+                    Overview
+                        <svg class="svg-arrow-icon" viewBox="0 0 24 24">
+                            <path d="M5 17l14-14m0 0v12m0-12H7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                     <!-- <p class="text-gray-600 text-base leading-relaxed">A brief overview of Project Alpha. This project focused on optimizing energy distribution using machine learning models.</p> -->
                     <!-- <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button> -->
                 </div>

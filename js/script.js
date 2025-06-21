@@ -62,3 +62,37 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     statusMessage.textContent = "Network error. Please try again later.";
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const offcanvasLinks = document.querySelectorAll('#offcanvasNavbar .offcanvas-nav-link');
+    const offcanvasElement = document.getElementById('offcanvasNavbar');
+    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement) || new bootstrap.Offcanvas(offcanvasElement); // Get instance or create if not already initialized
+
+    offcanvasLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor link behavior immediately
+
+            const targetId = this.getAttribute('href'); // Get the #id from the href
+            
+            // First, hide the offcanvas
+            bsOffcanvas.hide();
+
+            // Use a small timeout to allow the offcanvas to start closing before scrolling
+            // This creates a smoother experience and prevents the scroll from being interrupted.
+            setTimeout(() => {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Smooth scroll to the target element
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+
+                    // Update the URL hash without a jump (optional, but good for direct links)
+                    // history.pushState(null, null, targetId); // If you want to update the URL without adding to history
+                    window.location.hash = targetId; // This adds to history and updates the URL
+                }
+            }, 300); // Adjust this delay (in milliseconds) if needed. 300ms is a good starting point.
+        });
+    });
+});
