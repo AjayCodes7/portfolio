@@ -8,10 +8,9 @@ html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow-x: hidden; /* Prevent horizontal scroll */
-            /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+      overflow-x: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
     }
 
     .navbar{
@@ -24,14 +23,6 @@ html, body {
         padding-right: 30px;
         align-items: center;
     }
-
-    /* .navbar-links{
-        align-items: center;
-        width: 35%;
-        display: flex;
-        gap: 4%;
-        color: rgb(181, 181, 182);
-    } */
 
     .navlink{
         text-decoration: none;
@@ -55,12 +46,9 @@ html, body {
     background-size: 100% 100%;
 }
 .navbar-toggler .navbar-toggler-icon {
-    width: 28px;  /* Your desired fixed width */
-    height: 28px; /* Your desired fixed height */
-    background-size: 100% 100%; /* Important: Ensures the background image scales correctly */
-    /* Add !important if necessary, but try without it first */
-    /* width: 28px !important; */
-    /* height: 28px !important; */
+    width: 28px; 
+    height: 28px;
+    background-size: 100% 100%;
 }
 
     .offcanvas{
@@ -71,7 +59,7 @@ html, body {
 
     @media(max-width:768px){
             #offcanvasNavbar.offcanvas {
-            width: 60vw; /* Takes up 80% of the viewport width */
+            width: 60vw;
             max-width: 300px;
         }
     }
@@ -108,24 +96,23 @@ html, body {
 
     .content {
     position: absolute;
-    top: 70%; /* Adjusted for better vertical centering */
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -20%); /* Center horizontally and vertically */
+    transform: translate(-50%, -20%);
     color: white;
-    font-size: clamp(2.5rem, 8vw + 1rem, 8rem); /* Fluid font size */
+    font-size: clamp(2.5rem, 8vw + 1rem, 8rem);
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    width: 90%; /* Ensure content doesn't overflow horizontally */
-    text-align: left; /* Center text on small screens */
+    width: 90%;
+    text-align: left;
 }
 
-/* Adjust specific positioning for larger screens if needed */
-@media (min-width: 992px) { /* Adjust for desktop */
+@media (min-width: 992px) {
     .content {
         top: 40%;
         left: 6%;
-        transform: none; /* Remove centering for desktop */
-        text-align: left; /* Align text left for desktop */
+        transform: none;
+        text-align: left;
         width: auto;
     }
 }
@@ -140,36 +127,36 @@ html, body {
     }
 
     .about-me-section{
-    min-height: auto; /* Use min-height */
-    padding: 3vw 1%; /* Use viewport height for padding */
+    min-height: auto;
+    padding: 3vw 1%;
     display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    justify-content: center;
 }
 
 .about-me-heading{
-    font-size: clamp(3rem, 6vw + 1rem, 6rem); /* Fluid font size */
+    font-size: clamp(3rem, 6vw + 1rem, 6rem);
     font-weight: 600;
     padding-bottom: 2%;
     color: #101010;
-    text-align: left; /* Center heading on all screens */
+    text-align: left;
 }
 .about-me{
     border-radius: 25px;
     color: #222222;
-    font-family: "Poppins", sans-serif; /* Corrected typo: Poppins */
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: clamp(1rem, 2.2vw + 0.5rem, 2.2rem); /* Fluid font size */
+    font-size: clamp(1rem, 2.2vw + 0.5rem, 2.2rem);
     padding: 2% 5%;
-    max-width: 1400px; /* Limit max width for readability */
-    width: 90%; /* Fluid width */
+    max-width: 1400px;
+    width: 90%;
 }
 .skills-section{
-    min-height: auto; /* Use min-height */
+    min-height: auto;
     background-color: #101010;
-    padding: 5vh 2%; /* Adjusted padding */
+    padding: 5vh 2%;
     display: flex;
-    flex-direction: column; /* Stack heading and container */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -177,12 +164,12 @@ html, body {
 .skills{
     border-radius: 25px;
     color: rgb(229, 231, 235);
-    font-family: "Poppins", sans-serif; /* Corrected typo */
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 2.2rem;
     padding: 0% 5%;
-    width: 100%; /* Ensure it takes full width */
-    display: flex; /* Kept flex for centering heading */
+    width: 100%;
+    display: flex;
     /* flex-direction: column; Stack heading */
     align-items: center;
     justify-content: center;
@@ -190,16 +177,16 @@ html, body {
 
 .skills-heading{
     color: #ffffff;
-    font-size: clamp(3.5rem, 7vw + 1rem, 7rem); /* Fluid font size */
+    font-size: clamp(3.5rem, 7vw + 1rem, 7rem);
     font-weight: 700;
     padding: 2% 0%;
     text-align: left;
 }
 
 .skills-container {
-    width: 90%; /* Adjust width as needed */
-    max-width: 900px; /* Max width for larger screens */
-    height: 600px; /* Fixed height for the cloud effect, adjust with media queries */
+    width: 90%; 
+    max-width: 900px;
+    height: 600px; 
     position: relative;
     align-self: center;
 }
@@ -211,7 +198,7 @@ html, body {
     white-space: nowrap;
     transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
     cursor: pointer;
-    font-size: 1.5rem; /* Base font size, will be overridden */
+    font-size: 1.5rem;
 }
 
 .skill-item:hover {
@@ -222,10 +209,9 @@ html, body {
 .outline-text {
     color: transparent;
     -webkit-text-stroke: 2px #ffffff;
-    text-stroke: 2px #ffffff; /* Reduced stroke for better visibility on smaller fonts */
+    text-stroke: 2px #ffffff; 
 }
 
-/* Desktop/Large Screen (Default) - Adjust these values as necessary for your design */
 .c-lang { top: 10%; left: 10%; font-size: 4.5rem; }
 .python-lang { top: 10%; left: 25%; font-size: 4.5rem; }
 .php-lang { top: 10%; left: 68%; font-size: 3rem; }
@@ -242,13 +228,11 @@ html, body {
 .vscode-tool { top: 75%; left: 10%; font-size: 2.5rem; }
 .sql-lang { top: 57%; left: 75%; font-size: 3rem; }
 
-/* Media Queries for Skills Section */
 
-/* Tablet/Medium Screens (e.g., max-width 991px, roughly Bootstrap's -lg breakpoint) */
 @media (max-width: 991px) {
     .skills-container {
-        height: 500px; /* Adjust height */
-        max-width: 700px; /* Limit width */
+        height: 500px;
+        max-width: 700px;
     }
     .skills{
         flex-direction: column;
@@ -278,11 +262,10 @@ html, body {
 }
 
 
-/* Small Mobile Screens (e.g., max-width 767px, roughly Bootstrap's -md breakpoint) */
 @media (max-width: 767px) {
     .skills-container {
-        height: 400px; /* Reduce height further */
-        width: 95%; /* Take more width */
+        height: 400px;
+        width: 95%;
     }
     .skill-item { font-size: 1.2rem !important; }
     .python-lang { font-size: 2.5rem !important; }
@@ -290,7 +273,7 @@ html, body {
     .reactjs-lib { font-size: 1.8rem !important; }
     .c-lang { font-size: 3rem !important; }
     .php-lang, .flutter-framework, .sql-lang { font-size: 1.5rem !important; }
-    .outline-text { -webkit-text-stroke: 1px #ffffff; text-stroke: 1px #ffffff; } /* Thinner stroke */
+    .outline-text { -webkit-text-stroke: 1px #ffffff; text-stroke: 1px #ffffff; } 
 
     .c-lang { top: 5%; left: 5%; }
     .python-lang { top: 5%; left: 25%; }
@@ -309,10 +292,9 @@ html, body {
     .sql-lang { top: 60%; left: 70%; }
 }
 
-/* Very Small Mobile Screens (e.g., max-width 480px) */
 @media (max-width: 480px) {
     .skills-container {
-        height: 300px; /* Even smaller height */
+        height: 300px;
         width: 98%;
     }
     .skill-item { font-size: 1rem !important; }
@@ -340,140 +322,43 @@ html, body {
 }
 
 
-
-/* Not needed ======================================================================================================== Start*/ 
-
-/* Hide scrollbar track and thumb for Webkit browsers */
-body::-webkit-scrollbar {
-    width: 0; /* Set width to 0 to hide the scrollbar */
-    height: 0; /* Set height to 0 to hide the scrollbar */
-}
-
-/* Although not strictly needed after width: 0, good practice */
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
-
-/* Overlay styles */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top of everything */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.overlay-content {
-    background-color: #1f2937; /* Dark background for content */
-    color: #f9fafb; /* Light text */
-    padding: 30px;
-    border-radius: 1rem; /* rounded-2xl */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    max-width: 1300px;
-    width: 90%;
-    max-height: 90vh; /* Limit height to prevent overflow */
-    overflow-y: auto; /* Enable scrolling for long content within the overlay */
-    position: relative;
-    transform: translateY(20px); /* Start slightly below center */
-    transition: transform 0.3s ease-in-out;
-
-    /* Hide scrollbar for overlay content */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* Hide scrollbar track and thumb for overlay content (Webkit browsers) */
-.overlay-content::-webkit-scrollbar {
-    width: 0; /* Set width to 0 to hide the scrollbar */
-    height: 0; /* Set height to 0 to hide the scrollbar */
-}
-
-.overlay-content::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.overlay-content::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
-
-.overlay.active .overlay-content {
-    transform: translateY(0); /* Move to center when active */
-}
-
-.close-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #cbd5e0; /* Gray for close button */
-    cursor: pointer;
-    line-height: 1;
-    transition: color 0.2s ease;
-}
-
-.close-button:hover {
-    color: #fff;
-}
-/* Not needed ======================================================================================================== End*/ 
-
 .projects-section{
     height: auto;
     background-color: white;
-    padding: 5vh 2%; /* Use viewport height for padding */
+    padding: 5vh 2%;
 }
 
 .projects{
     border-radius: 25px;
     color: #222222;
-    font-family: "Poppins", sans-serif; /* Corrected typo */
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 2.2rem;
     padding: 2% 5%;
-    max-width: 1400px; /* Limit max width for readability */
-    margin: 0 auto; /* Center the projects container */
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .projects-heading{
     color: #101010;
-    font-size: clamp(3.5rem, 7vw + 1rem, 7rem); /* Fluid font size */
+    font-size: clamp(3.5rem, 7vw + 1rem, 7rem);
     font-weight: 700;
     padding: 0;
-    text-align: left; /* Center heading */
-    margin-bottom: 30px; /* Add some space below heading */
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 .projects-grid{
-    padding : 2% 0%; /* Remove horizontal padding here, let parent handle it */
+    padding : 2% 0%;
     display: grid;
-    grid-template-columns: 1fr; /* This will now apply to all screen sizes, including PC */
-    gap: 2rem; /* Consistent gap between items */
+    grid-template-columns: 1fr;
+    gap: 2rem;
     margin-top: 2%;
 }
 
 .project-card-left{
-    padding: 1.5rem ; /* Use rem for consistent padding */
-    font-size: 1rem; /* Base font size */
+    padding: 1.5rem ; 
+    font-size: 1rem;
 }
 
 
@@ -489,7 +374,7 @@ body::-webkit-scrollbar-thumb {
             border: 1px solid black;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none; /* If it's a link styled as a button */
+            text-decoration: none;
             max-width: fit-content;
         }
 
@@ -499,28 +384,24 @@ body::-webkit-scrollbar-thumb {
             text-underline-offset: 5px;
         }
 
-        /* Alternatively, using an SVG icon */
         .overview-button .svg-arrow-icon {
             align-items: center;
             margin-left: 8px;
             margin-top: 8px;
-            width: 1.3rem; /* Adjust size as needed */
+            width: 1.3rem;
             height: 1.3rem;
-            fill: currentColor; /* Inherits color from parent */
+            fill: currentColor;
         }
 
 .navbar-toggler {
-    border: 0px solid rgba(255, 255, 255, 0.5); /* A slightly more visible white border */
-    /* You can make it bolder, e.g., border: 2px solid white; */
+    border: 0px solid rgba(255, 255, 255, 0.5);
 }
 
 .navbar-toggler:focus {
-    box-shadow: none; /* Lighter shadow on focus */
+    box-shadow: none;
     outline: 0;
-    /* Or remove focus outline entirely if you don't want it: outline: 0; box-shadow: none; */
 }
 
-/* Adjust project card text sizes */
 .projects-grid .text-4xl {
     font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
 }
@@ -555,37 +436,36 @@ body::-webkit-scrollbar-thumb {
     color: white;
 }
 
-/* last contact us */
 main {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
-    padding: 0px 5%;
-    flex-grow: 1; /* Allows main content to take up available space */
+    flex-wrap: wrap; 
+    padding: 0 5%;
+    flex-grow: 1; 
 }
 
 .message-section,
 .contact-social-section {
     flex: 1;
-    min-width: 300px; /* Minimum width for responsiveness */
-    margin: 20px;
+    min-width: 300px;
+    margin: 5% 2%;
+    padding: 0% 2%;
 }
 
 .message-section h2,
 .contact-social-section h2 {
     color: #fff;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .contact-social-section {
     display: flex; 
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
-/* Form styling */
 .form-group {
     margin-bottom: 15px;
 }
@@ -604,7 +484,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: #bbb; /* Lighter color for placeholders */
+    color: #bbb;
 }
 
 button[type="submit"] {
@@ -623,7 +503,6 @@ button[type="submit"]:hover {
     color: #000;
 }
 
-/* Contact and Social sections */
 .contact-me ul,
 .social ul {
     list-style: none;
@@ -638,31 +517,30 @@ button[type="submit"]:hover {
 
 .contact-me a,
 .social a {
-    color: #fff; /* White link color */
+    color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-me a:hover,
 .social a:hover {
-    color: #aaa; /* Slightly grey on hover */
-    text-decoration: underline; /* Underline on hover */
+    color: #aaa; 
+    text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-/* Specific styling for the red underline as seen in the image */
 .contact-me a[href*="wa.me"],
 .social a[href*="instagram"] {
     text-decoration: underline;
     text-decoration-color: #25D366;
-    text-underline-offset: 3px; /* Adjust as needed for better spacing */
+    text-underline-offset: 3px;
 }
 
 footer {
-    display: flex; /* Make the footer a flex container */
-    justify-content: space-between; /* Distribute space between items (pushes them to ends) */
-    align-items: center; /* Vertically align items in the middle */
-    padding: 20px 50px 40px 50px; /* Adjust padding if needed, left/right padding is important here */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 40px 0px;
     border-top: 1px solid #333;
     border-width: 90%;
     color: #aaa;
@@ -673,7 +551,7 @@ footer{
 }
 
 footer p {
-    margin: 0; /* Remove default paragraph margins to prevent extra spacing */
+    margin: 0;
 }
 
 #message{
@@ -692,5 +570,5 @@ footer p {
 }
 
 #about-me, #my-skills, #projects, #contact-me {
-    scroll-margin-top: 5vh; /* Adjusted for fixed navbar */
+    scroll-margin-top: 5vh;
 }
