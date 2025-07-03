@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Meme Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="AI Meme Generator - Create humorous memes using AI-powered text and image generation.">
+  <meta name="keywords" content="AI, Meme Generator, Natural Language Processing, Deep Learning, Stable Diffusion, GPT, Image Synthesis, Meme Creation, ajay,ajay kommana, AjayCodes7">
+  <meta name="author" content="AjayCodes7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Meme Generator</h1>
+
+    <div class="section-divider"></div>
+
+    <h2>Abstract</h2>
+    <p>
+      This project introduces an AI-powered meme generator that leverages the combined power of advanced Natural Language Processing (NLP) and Deep Learning-based image synthesis models. By automatically generating humorous captions and corresponding images, this system revolutionizes the process of meme creation. The application is capable of generating relatable and humorous memes on diverse topics using minimal user input.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Theoretical Survey</h2>
+    <p>
+      The project is built on two major AI technologies:
+    </p>
+    <ul>
+      <li><strong>Large Language Models (LLMs):</strong> These models are trained on massive text datasets to understand and generate human-like language. In this project, LLMs generate witty captions based on user-provided topics by analyzing language patterns and humor structures.</li>
+      <li><strong>Stable Diffusion:</strong> A state-of-the-art text-to-image model that uses latent diffusion techniques to generate high-quality images from textual descriptions. It is efficient in creating visually appealing images that match the generated captions.</li>
+    </ul>
+    <p>
+      Additionally, tools like Pillow (Python Imaging Library) are used for image manipulation, combining text and images seamlessly.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Generates both meme captions and images automatically based on simple user input.</li>
+      <li>Supports various meme genres like sarcasm, irony, or educational humor.</li>
+      <li>Offers a simple, intuitive web interface for ease of use.</li>
+      <li>Ensures visually balanced memes by adjusting caption placement automatically.</li>
+      <li>Completely server-side processing to maintain user privacy.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li><strong>Programming Language:</strong> Python 3</li>
+      <li><strong>Frameworks & Libraries:</strong> Flask, Pillow, OpenAI API, Requests</li>
+      <li><strong>AI Models:</strong> Stable Diffusion, GPT-based Language Models</li>
+      <li><strong>Tools:</strong> VS Code, Hugging Face, GitHub</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>System Workflow</h2>
+    <p>
+      The system follows a structured workflow to automate meme generation:
+    </p>
+    <ul>
+      <li>User enters a meme topic or selects a predefined category via the web interface.</li>
+      <li>The LLM generates a humorous caption and a related image description.</li>
+      <li>The generated image description is passed to Stable Diffusion, which produces an image matching the description.</li>
+      <li>The generated caption is overlaid on the image using Pillow, ensuring clarity and aesthetic appeal.</li>
+      <li>The final meme is displayed to the user for download or sharing.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Testing & Evaluation</h2>
+    <p>
+      The system underwent rigorous testing:
+    </p>
+    <ul>
+      <li>Tested on varied topics like technology, workplace humor, education, and pop culture.</li>
+      <li>Measured quality of captions using readability, humor relevance, and engagement score.</li>
+      <li>Evaluated image quality based on resolution, style consistency, and visual clarity.</li>
+      <li>Performance testing for API latency and processing time to ensure smooth user experience.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Limitations</h2>
+    <ul>
+      <li>Humor can sometimes be culturally sensitive or misunderstood by certain user groups.</li>
+      <li>AI-generated content may occasionally produce irrelevant or incoherent outputs.</li>
+      <li>Requires GPU or cloud infrastructure for generating high-resolution images effectively.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Future Enhancements</h2>
+    <ul>
+      <li>Incorporate user-defined meme templates and fonts.</li>
+      <li>Add support for multi-lingual meme generation to target broader audiences.</li>
+      <li>Implement meme style recommendations based on trending topics.</li>
+      <li>Enable collaborative meme generation where multiple users can co-create.</li>
+      <li>Optimize resource usage for faster image generation on low-end hardware.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Conclusion</h2>
+    <p>
+      The AI Meme Generator successfully combines cutting-edge language and image generation models to provide a fully automated meme creation platform. It significantly reduces the effort required to produce engaging, humorous content and opens new possibilities in the fields of digital marketing, social media, and educational content creation. With planned enhancements, this tool has the potential to revolutionize digital humor and creative expression.
+    </p>
+
+    <a href="https://github.com/AjayCodes7/ai-meme-generator" target="_blank" class="source-link">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.207 11.385c.6.113.793-.26.793-.577v-2.234c-3.338.726-4.042-1.613-4.042-1.613-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.833 2.809 1.304 3.495.997.107-.776.42-1.305.763-1.605-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.47-2.382 1.235-3.222-.124-.303-.535-1.527.117-3.176 0 0 1.007-.322 3.3 1.23a11.5 11.5 0 016.003 0c2.29-1.552 3.295-1.23 3.295-1.23.655 1.649.244 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.624-5.475 5.921.431.372.815 1.103.815 2.222v3.293c0 .32.192.694.8.576A12.004 12.004 0 0024 12c0-6.627-5.373-12-12-12z"/>
+      </svg>
+      Source Code
+    </a>
+  </div>
+</body>
+</html>

@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-
     html {
       font-size: 16px;
     }
     body {
       font-family: 'Poppins', sans-serif;
-      /* font-family: "Noto Serif", serif; */
       background-color: #101010;
       color: #e0e0e0;
       margin: 0;
@@ -23,11 +20,6 @@
     }
     h2 {
       font-size: 1.75rem;
-      margin-top: 2 rem;
-      text-align: left;
-    }
-    h3 {
-      font-size: 1.5rem;
       margin-top: 2.5rem;
       text-align: left;
     }
@@ -40,42 +32,6 @@
       border-top: 1px solid #333;
       margin: 2.5rem 0;
     }
-    ul {
-      padding-left: 1.75rem;
-    }
-    a.source-link {
-      display: inline-block;
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: #6067b6;
-      text-decoration: none;
-      border-bottom: 1px solid #6067b6;
-      transition: color 0.3s ease, border-color 0.3s ease;
-    }
-    a.source-link:hover {
-      color: #ffffff;
-      border-color: #ffffff;
-    }
-    @media (max-width: 64rem) {
-      .container {
-        padding: 4rem 2rem;
-      }
-    }
-    @media (max-width: 48rem) {
-      .container {
-        padding: 2.5rem 1.5rem;
-      }
-      h1 {
-        font-size: 1.875rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      p, ul {
-        font-size: 1rem;
-      }
-    }
-
     .source-link {
       display: inline-flex;
       align-items: center;
@@ -96,11 +52,6 @@
       color: #ffffff;
       border-color: #ffffff;
     }
-    @media (max-width: 64rem) {
-      .container {
-        padding: 4rem 2rem;
-      }
-    }
     @media (max-width: 48rem) {
       .container {
         padding: 2.5rem 1.5rem;
@@ -114,10 +65,4 @@
       p, ul {
         font-size: 1rem;
       }
-    }
-
-    .supervisor {
-      font-size: 0.875rem;
-      /* margin-top: 1.25rem; */
-      color: #7f8281;
     }

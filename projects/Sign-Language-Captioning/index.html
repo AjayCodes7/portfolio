@@ -1,30 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Portfolio</title>
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <title>Real-Time Sign Language Captioning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-
 <body>
-    <div>
-        <h1>Real-Time Sign Language Captioning For Video Chats</h1>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <div class="container">
+    <h1>Real-Time Sign Language Captioning for Video Chats</h1>
+    <p class="supervisor"><strong>Supervisor:</strong> Mrs. K. Vindhya Rani (Assistant Professor, MVGRCOE)</p>
+
+    <div class="section-divider"></div>
+
+    <h2>Abstract</h2>
+    <p>
+      This project proposes a solution for enabling accessible communication for the deaf and hard-of-hearing community through video chats. The system leverages machine learning and computer vision technologies to detect sign language gestures in real-time and translate them into text captions. The goal is to provide a more inclusive communication platform that facilitates seamless virtual conversations for everyone, regardless of their hearing ability. The project integrates cutting-edge tools for video processing, gesture recognition, and low-latency communication to offer an efficient and accessible web-based platform.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Project Highlights</h2>
+    <ul>
+      <li>Real-time gesture detection through the user's webcam for instant translation of sign language.</li>
+      <li>Seamless peer-to-peer video calls with integrated captioning features.</li>
+      <li>Web-based application with cross-platform compatibility and minimal setup required.</li>
+      <li>Highly accurate recognition model with approximately 90% success rate in controlled environments.</li>
+      <li>Modular architecture allowing easy extension to support additional gestures or languages.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Dataset & Model Overview</h2>
+    <p>
+      The system is built upon a custom-designed dataset, consisting of approximately 100 sign language classes with hundreds of images per class. To ensure robustness and accuracy:
+    </p>
+    <ul>
+      <li>Double-handed signs contain 100 images per class.</li>
+      <li>Single-handed signs include 50 images per hand (left and right).</li>
+      <li>Data augmentation techniques such as rotation, flipping, and scaling were applied to simulate real-world variability.</li>
+    </ul>
+    <p>
+      The Random Forest Classifier was chosen for its effectiveness with structured landmark data and its suitability for real-time applications. Mediapipe is utilized for landmark extraction, while the API layer is handled by Flask for smooth integration.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>System Architecture & Workflow</h2>
+    <ul>
+      <li>Video feed captured using <strong>getUserMedia</strong> API.</li>
+      <li>Hand landmark detection using <strong>Mediapipe Hands</strong>.</li>
+      <li>Feature extraction from landmark points followed by classification using <strong>Random Forest</strong>.</li>
+      <li>Flask API returns recognized signs in real-time for captioning on video calls.</li>
+      <li>WebRTC & PeerJS enable live, low-latency video streaming between users.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Key Technologies & Tools</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, WebRTC, PeerJS, Flask</li>
+      <li><strong>Backend:</strong> Node.js, Flask, Socket.io</li>
+      <li><strong>Machine Learning & Computer Vision:</strong> OpenCV, Mediapipe, Random Forest Classifier</li>
+      <li><strong>Development Tools:</strong> GitHub, VS Code, Flask API, Data Augmentation Tools</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Testing & Validation</h2>
+    <p>Several testing procedures were conducted to ensure system reliability:</p>
+    <ul>
+      <li>API response testing to verify real-time recognition performance.</li>
+      <li>Model accuracy testing using controlled hand gestures and varied lighting conditions.</li>
+      <li>Connection testing to validate stable peer-to-peer video calls.</li>
+      <li>Live testing with multiple users to ensure robust, real-time functionality.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Real-World Applications</h2>
+    <ul>
+      <li>Inclusive online education platforms for hearing-impaired students.</li>
+      <li>Corporate video conferencing tools promoting workplace diversity.</li>
+      <li>Healthcare consultations for deaf patients to improve accessibility.</li>
+      <li>Social media platforms to encourage diverse, barrier-free communication.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Future Enhancements</h2>
+    <ul>
+      <li>Integration of deep learning models (e.g., Convolutional Neural Networks, Recurrent Neural Networks) for higher accuracy.</li>
+      <li>Support for dynamic (continuous) sign language gestures and full-sentence recognition.</li>
+      <li>Deployment of mobile applications with optimized performance for on-the-go use cases.</li>
+      <li>Automatic speech-to-sign and sign-to-speech translation for full-duplex communication.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Conclusion</h2>
+    <p>
+      This project successfully demonstrates the feasibility of integrating real-time sign language recognition into video conferencing systems. By combining AI-powered gesture recognition, efficient machine learning models, and robust real-time communication protocols, the system provides a highly functional, scalable, and socially impactful solution. This work lays the foundation for more inclusive digital environments and promotes accessible technology for all.
+    </p>
+
+    <a onclick="window.open('https://github.com/AjayCodes7/Real-time-sign-language-detection-api'); window.open('https://github.com/AjayCodes7/webrtc-app'); "  target="_blank" class="source-link">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.207 11.385c.6.113.793-.26.793-.577v-2.234c-3.338.726-4.042-1.613-4.042-1.613-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.833 2.809 1.304 3.495.997.107-.776.42-1.305.763-1.605-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.47-2.382 1.235-3.222-.124-.303-.535-1.527.117-3.176 0 0 1.007-.322 3.3 1.23a11.5 11.5 0 016.003 0c2.29-1.552 3.295-1.23 3.295-1.23.655 1.649.244 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.624-5.475 5.921.431.372.815 1.103.815 2.222v3.293c0 .32.192.694.8.576A12.004 12.004 0 0024 12c0-6.627-5.373-12-12-12z"/>
+      </svg>
+      Source Code
+    </a>
+  </div>
 </body>
 </html>
