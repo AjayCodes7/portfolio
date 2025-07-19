@@ -35,6 +35,19 @@ const setVanta = () => {
 };
 document.addEventListener("DOMContentLoaded", setVanta);
 
+
+const smooth = () =>{
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  let smoother = ScrollSmoother.create({
+    smooth: 3,
+    effects: true
+  });
+}
+
+document.addEventListener("DOMContentLoaded", smooth);
+
+
+
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
   e.preventDefault(); // Prevent default form submit (no page reload)
 
