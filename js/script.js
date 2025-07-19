@@ -1,23 +1,3 @@
-// const setVanta = () => {
-//     if (window.VANTA) window.VANTA.DOTS({
-//     el: ".s-page-1 .s-section-1 .s-section",
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: 200.00,
-//     minWidth: 200.00,
-//     scale: 1.00,
-//     scaleMobile: 1.00,
-//     color: 0xffffff,
-//     color2: 0x939393,
-//     size: 3.20,
-//     spacing: 25.00,
-//     showLines: false
-//     });
-// };
-// document.addEventListener("DOMContentLoaded", setVanta);
-
-
 const setVanta = () => {
     if (window.VANTA) window.VANTA.GLOBE({
         el: ".s-page-1 .s-section-1 .s-section",
@@ -39,11 +19,10 @@ document.addEventListener("DOMContentLoaded", setVanta);
 const smooth = () =>{
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   let smoother = ScrollSmoother.create({
-    smooth: 3,
+    smooth: 2,
     effects: true
   });
 }
-
 document.addEventListener("DOMContentLoaded", smooth);
 
 
